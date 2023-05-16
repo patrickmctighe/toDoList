@@ -123,6 +123,9 @@ background-color: lightblue;
     background-color:#61c0bf;
     border-top-left-radius: 45px;
     border-top-right-radius: 45px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .addTask{
     
@@ -130,17 +133,23 @@ background-color: lightblue;
 }
 .cardBtn, .cardBtn2{
     
-    width: 100%;
+    width: 75%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     color: black;
     font-size: 20px;
+    border-top-right-radius: 45px;
+    border-top-left-radius: 45px;
 }
-#cardId{
-   
+#cardBtnId{
+   border-top-right-radius: 45px;
+   border-top-left-radius: 45px;
+   border-bottom-left-radius: 0px;
+   border-bottom-right-radius: 0px;
+   padding-bottom: 10px;
 }
  .toDoForm{
    
@@ -189,11 +198,26 @@ background-color: lightblue;
 
 #project{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-   gap:5px;
+   gap:10px;
    background:none;
+   background-color: aquamarine;
+   color: black;
+   padding-left: 15px;
+   width: 100%
    
+}
+.rem{
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black
+}
+.material-symbols-outlined {
+color: black;
+    font-size: 20px;
 }
 .addProject{
     width: 150px;
@@ -231,7 +255,14 @@ background-color: lightblue;
    border-style: ridge;
    border-width: 2px;
   border-color: transparent;
-   padding-top: 15px;;
+   padding-top: 15px;
+   background-color: #61c0bf;
+   border-top-right-radius: 45px;
+   border-top-left-radius: 45px;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap:10px;
 }
 /* .c1{
     color:red;
@@ -251,9 +282,32 @@ background-color: lightblue;
 
 .save, .save2{
     display: none;
+    width: 20%;
+    background-color: transparent;
+    border-color: transparent;
 }
 
 .editForm, .editForm2{
     display: flex;
     gap:15px;
+  
+}
+
+.dele, .dele2{
+    background-color: transparent;
+    border-color: transparent;
+    width: 20%;
+}
+
+.edit, .edit2{
+    background-color: transparent;
+    border-color: transparent;
+    width: 20%;
+}
+
+.dls, .dls2{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
 }

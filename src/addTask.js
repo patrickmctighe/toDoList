@@ -53,7 +53,8 @@ function addTasks() {
       let dele = document.createElement("button");
       let dele2 = document.createElement("button");
       let posts = document.querySelector(".posts");
-
+let dls = document.createElement("div")
+let dls2 = document.createElement("div")
       let cardDescription = document.createTextNode(
         "Description: " + res.description
       );
@@ -96,7 +97,8 @@ function addTasks() {
       edit2.setAttribute("class", "edit2");
       save.setAttribute("class", "save");
       save2.setAttribute("class", "save2");
-
+      dls.setAttribute("class","dls")
+      dls2.setAttribute("class","dls2")
       c0.appendChild(cardData);
       c02.appendChild(cardData2);
       c2.appendChild(cardDescription);
@@ -113,20 +115,28 @@ function addTasks() {
       card2.appendChild(c42);
       c1.append(cardCompleted, cardCheck);
       c12.append(cardCompleted2, cardCheck2);
-      card.appendChild(c1);
-      card2.appendChild(c12);
-      card.appendChild(dele);
-      card2.appendChild(dele2);
-      card.appendChild(edit);
-      card2.appendChild(edit2);
-      card.appendChild(save);
-      card2.appendChild(save2);
-      dele.innerHTML = "Remove";
-      dele2.innerHTML = "Remove";
-      edit.innerHTML = "Edit";
-      edit2.innerHTML = "Edit";
-      save.innerHTML = "Save";
-      save2.innerHTML = "Save";
+     dls.append(save,edit,dele)
+     dls2.append(save2,edit2,dele2)
+      card.appendChild(dls);
+      card2.appendChild(dls2);
+      dele.innerHTML = `<span class="material-symbols-outlined">
+      delete
+      </span>`;
+      dele2.innerHTML = `<span class="material-symbols-outlined">
+      delete
+      </span>`;
+      edit.innerHTML = `<span class="material-symbols-outlined">
+      edit
+      </span>`;
+      edit2.innerHTML = `<span class="material-symbols-outlined">
+      edit
+      </span>`
+      save.innerHTML = `<span class="material-symbols-outlined">
+      save
+      </span>`;
+      save2.innerHTML = `<span class="material-symbols-outlined">
+      save
+      </span>`;
 
       dele.addEventListener("click", (e) => {
         if (e.target) {
@@ -167,7 +177,7 @@ function addTasks() {
       let displayedCard = null;
 
       posts.childNodes.forEach((child) => {
-        if (child.style.display === "block") {
+        if (child.style.display === "flex") {
           displayedCard = child;
         }
       });
@@ -301,7 +311,9 @@ function addTasks() {
       });
       //correct
       save.addEventListener("click", function saveTask(e) {
-        let goodCard = e.target.parentNode;
+        let good = e.target.parentNode;
+        let goodC = good.parentNode
+        let goodCard = goodC.parentNode;
         let goodCardId = goodCard.id;
 
         let goodCard2 = document.getElementById(goodCardId);
@@ -347,8 +359,11 @@ function addTasks() {
       });
 
       save2.addEventListener("click", function saveTask2(e) {
-        let goodCard2 = e.target.parentNode;
+        let good2 = e.target.parentNode;
+        let goodC2 = good2.parentNode
+        let goodCard2 = goodC2.parentNode
         let goodCardId2 = goodCard2.id;
+        console.log(goodCardId2,goodCard2)
         let card = document.querySelector("#" + goodCardId2 + ".card");
         
         let description2 = goodCard2.querySelector(".c22");

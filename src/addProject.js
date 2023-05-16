@@ -34,7 +34,7 @@ function addProj() {
       projPost.setAttribute("class", res.title);
       projPost.setAttribute("id","projTab")
       projPost.innerText = res.title;
-      projPost.style.display = "block";
+      projPost.style.display = "flex";
       data.setAttribute("class", "data");
       title_rem.setAttribute("class", res.title);
       title_rem.setAttribute("id","project")
@@ -48,11 +48,13 @@ function addProj() {
       title_rem.appendChild(rem);
 
       posts.appendChild(projPost);
-      rem.innerHTML = "r";
+      rem.innerHTML = `<span class="material-symbols-outlined">
+delete
+</span>`;
       title_rem.addEventListener("click", function () {
         if (projPost.style.display === "none") {
           
-          projPost.style.display = "block";
+          projPost.style.display = "flex";
         } else {
           projPost.style.display = "none";
         }

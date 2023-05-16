@@ -64,7 +64,7 @@ function projAll() {
   allBtn.addEventListener("click", function selectAll() {
     
     if (allFolder.style.display === "none") {
-      allFolder.style.display = "block";
+      allFolder.style.display = "flex";
     } else {
       allFolder.style.display = "none";
     }

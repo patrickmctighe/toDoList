@@ -13,6 +13,40 @@ button{
     justify-content: center;
     align-items: center;
 }
+
+.all:hover, .projectBtn:hover, .addProject:hover, .addTask:hover{
+     color:#61c0bf;
+    
+    border-color: #ffb6b9;
+    background-color: #fae3d9;
+}
+
+.submit{
+    color: black;
+    background-color: aquamarine;
+    font-size: 25px;
+    height: 25px;
+    width: 40px;
+    display:flex;
+
+}
+.submit:hover{
+    background-color: #61c0bf;
+}
+
+.add{
+    color: black;
+    background-color:#fae3d9;
+    font-size: 25px;
+    height: 25px;
+    width: 40px;
+    display:flex;
+}
+
+.add:hover{
+    background-color: #61c0bf;
+}
+
 .head{
     display: flex;
     justify-content: space-between;
@@ -87,8 +121,8 @@ input:focus,input:active{
 background-color: lightblue;
   
 }
-#title:focus,#title:active{
-   
+#title:focus, #priority:focus, #date:focus, #description:focus{
+    background-color: lightblue;
 }
 #projName{
     width: 70%

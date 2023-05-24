@@ -32,7 +32,7 @@
           <button class="addProject">A d d - P r o j e c t</button>
           <form action="#" class="projectForm" style="display: none">
             <label for="projName">Project Name:</label>
-            <input type="text" id="projName" name="project" />
+            <input type="text" id="projName" name="project" required/>
             <button class="submit" type="submit">+</button>
           </form>
         </div>
@@ -50,15 +50,15 @@
             </div>
             <div class="formItem">
               <label for="description" class="description">Description:</label>
-              <input type="" id="description" name="description" />
+              <input type="" id="description" name="description" required/>
             </div></div>
             <div class="datPri"><div class="formItem">
               <label for="date" class="dueDate">Due Date: </label>
-              <input type="date" id="date" name="date" />
+              <input type="date" id="date" name="date" required/>
             </div>
             <div class="formItem">
               <label for="priority" class="priority">Priority:</label>
-              <select name="priority" id="priority" >
+              <select name="priority" id="priority"  >
                 <option value="Low">Low</option>
                 <option value="Medium">Medium</option>
                 <option value="High">High</option>

@@ -20,6 +20,7 @@ function addProj() {
     oneOpen();
     updateArr();
     form.reset();
+    form.style.display = "none"
   }
 
   form.addEventListener("submit", handleSubmit);

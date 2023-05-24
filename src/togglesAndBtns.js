@@ -26,6 +26,7 @@ function projBtnToggle() {
 function projFormToggle() {
   const addProj = document.querySelector(".addProject");
   let form = document.querySelector(".projectForm");
+  
   addProj.addEventListener("click", function () {
     if (form.style.display === "none") {
       form.style.display = "flex";
@@ -34,23 +35,28 @@ function projFormToggle() {
     }
   });
 }
-//hides the task form after submit
-function addBtn() {
-  let addBtn = document.querySelector(".add");
-  let form = document.getElementById("form");
-  addBtn.addEventListener("click", function () {
-    form.style.display = "none";
-  });
-}
+// //hides the task form after submit
+// function addBtn() {
+//   let addBtn = document.querySelector(".add");
+//   let form = document.getElementById("form");
 
-//hides project form after submit
-function projFormSubmitBtn() {
-  let addBtn = document.querySelector(".submit");
-  let form = document.querySelector(".projectForm");
-  addBtn.addEventListener("click", function () {
-    form.style.display = "none";
-  });
-}
+//   addBtn.addEventListener("click", function () {
+//     form.style.display = "none";
+//     console.log("hello")
+//   });
+// }
+
+// //hides project form after submit
+// function projFormSubmitBtn() {
+//   let addBtn = document.querySelector(".submit");
+//   let form = document.querySelector(".projectForm");
+//   let projName = document.querySelector("#projName")
+//   addBtn.addEventListener("click", function () {
+//     if (projName.innerText !== "")
+//     form.style.display = "none";
+//     console.log("hi")
+//   });
+// }
 function oneOpen(){
   let posts = document.querySelectorAll("#projTab")
   
@@ -86,9 +92,9 @@ function projAll() {
 export {
  oneOpen,
   taskBtnToggle,
-  addBtn,
+  // addBtn,
   projBtnToggle,
   projFormToggle,
-  projFormSubmitBtn,
+  // projFormSubmitBtn,
   projAll,
 };

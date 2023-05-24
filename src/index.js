@@ -2,20 +2,20 @@ import "./layout.css";
 import { addTasks } from "./addTask";
 import {
   taskBtnToggle,
-  addBtn,
+  // addBtn,
   projBtnToggle,
   projFormToggle,
-  projFormSubmitBtn,
+  // projFormSubmitBtn,
   projAll,
 } from "./togglesAndBtns";
 import { addProj } from "./addProject";
 
 projAll();
-projFormSubmitBtn();
+// projFormSubmitBtn();
 projFormToggle();
 addProj();
 projBtnToggle();
-addBtn();
+// addBtn();
 taskBtnToggle();
 addTasks();
 

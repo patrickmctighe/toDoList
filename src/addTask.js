@@ -10,7 +10,7 @@ function addTasks() {
         (this.description = description),
         (this.date = date),
         (this.priority = priority),
-        // (this.completed= completed),
+      
         (this.data = data);
     }
   }
@@ -20,13 +20,14 @@ function addTasks() {
       document.getElementById("description").value,
       document.getElementById("date").value,
       document.getElementById("priority").value,
-      // document.getElementById("check").value,
+      
       Math.random() * 7
     );
     event.preventDefault();
     myTasks.push(newTask);
     updateArr();
     form.reset();
+    form.style.display = "none"
   });
   function updateArr() {
     // posts.innerText = " ";

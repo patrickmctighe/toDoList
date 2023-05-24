@@ -1,6 +1,6 @@
 *{
     font-family: 'Jura', sans-serif;
-
+margin: 0px;
 }
 button{
     color: #fae3d9;
@@ -177,14 +177,11 @@ background-color: lightblue;
     font-size: 20px;
     border-top-right-radius: 45px;
     border-top-left-radius: 45px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding-bottom: 10px;
 }
-#cardBtnId{
-   border-top-right-radius: 45px;
-   border-top-left-radius: 45px;
-   border-bottom-left-radius: 0px;
-   border-bottom-right-radius: 0px;
-   padding-bottom: 10px;
-}
+
  .toDoForm{
    
     display: none;

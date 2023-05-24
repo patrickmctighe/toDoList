@@ -51,7 +51,16 @@ function projFormSubmitBtn() {
     form.style.display = "none";
   });
 }
+function oneOpen(){
+  let posts = document.querySelectorAll("#projTab")
+  
+  for(let i = 0 ; i<posts.length; i ++){
+    if(posts[i].style.display === "flex"){
+  posts[i].style.display = "none"
+}
+  }
 
+}
 function projAll() {
   let allBtn = document.querySelector(".all");
   let posts = document.querySelector(".posts");
@@ -64,6 +73,7 @@ function projAll() {
   allBtn.addEventListener("click", function selectAll() {
     
     if (allFolder.style.display === "none") {
+      oneOpen()
       allFolder.style.display = "flex";
     } else {
       allFolder.style.display = "none";
@@ -71,60 +81,10 @@ function projAll() {
   });
 }
 
-// let projectContainer = document.querySelector(".posts");
-// projectContainer.addEventListener("click", function(e) {
-//   openSelected(e);
-// });
 
-// function openSelected(e) {
-//   if (!e || !e.target) {
-//     return;
-//   }
-
-//   // Get the target project div that was clicked
-//   let targetProject = e.target.closest(".project");
-
-//   // Return early if the click didn't happen on a project div
-//   if (!targetProject) {
-//     return;
-//   }
-
-//   // Hide all project divs except for the target one
-//   let allProjects = document.querySelectorAll(".project");
-//   allProjects.forEach(project => {
-//     if (project === targetProject) {
-//       project.style.display = "block";
-//     } else {
-//       project.style.display = "none";
-//     }
-//   });
-// }
-
-// function displayElement() {
-//   // Get the parent div
-//   const parentDiv = document.querySelector(".posts")
-
-//   // Get all child elements of the parent div
-//   const childElements = parentDiv.children;
-
-//   // Loop through the child elements
-//   for (let i = 0; i < childElements.length; i++) {
-//     const childElement = childElements[i];
-
-//     // If the child element is the one to be displayed, display it
-//     if (childElement) {
-//       childElement.style.display = "block";
-//     } 
-//     // Otherwise, hide it
-//     else {
-//       childElement.style.display = "none";
-//     }
-//   }
-// }
 
 export {
-  // displayElement,
-  // openSelected,
+ oneOpen,
   taskBtnToggle,
   addBtn,
   projBtnToggle,

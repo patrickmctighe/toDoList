@@ -53,8 +53,8 @@ function addTasks() {
       let dele = document.createElement("button");
       let dele2 = document.createElement("button");
       let posts = document.querySelector(".posts");
-let dls = document.createElement("div")
-let dls2 = document.createElement("div")
+      let dls = document.createElement("div");
+      let dls2 = document.createElement("div");
       let cardDescription = document.createTextNode(
         "Description: " + res.description
       );
@@ -97,8 +97,8 @@ let dls2 = document.createElement("div")
       edit2.setAttribute("class", "edit2");
       save.setAttribute("class", "save");
       save2.setAttribute("class", "save2");
-      dls.setAttribute("class","dls")
-      dls2.setAttribute("class","dls2")
+      dls.setAttribute("class", "dls");
+      dls2.setAttribute("class", "dls2");
       c0.appendChild(cardData);
       c02.appendChild(cardData2);
       c2.appendChild(cardDescription);
@@ -115,8 +115,8 @@ let dls2 = document.createElement("div")
       card2.appendChild(c42);
       c1.append(cardCompleted, cardCheck);
       c12.append(cardCompleted2, cardCheck2);
-     dls.append(save,edit,dele)
-     dls2.append(save2,edit2,dele2)
+      dls.append(save, edit, dele);
+      dls2.append(save2, edit2, dele2);
       card.appendChild(dls);
       card2.appendChild(dls2);
       dele.innerHTML = `<span class="material-symbols-outlined">
@@ -130,7 +130,7 @@ let dls2 = document.createElement("div")
       </span>`;
       edit2.innerHTML = `<span class="material-symbols-outlined">
       edit
-      </span>`
+      </span>`;
       save.innerHTML = `<span class="material-symbols-outlined">
       save
       </span>`;
@@ -169,9 +169,9 @@ let dls2 = document.createElement("div")
       });
 
       cardBtn.setAttribute("class", "cardBtn");
-      cardBtn.setAttribute("id", "cardBtnId");
+      cardBtn.setAttribute("id", res.title);
       cardBtn2.setAttribute("class", "cardBtn2");
-      cardBtn2.setAttribute("id", "cardBtnId");
+      cardBtn2.setAttribute("id", res.title);
       cardBtn.append(cardTitle);
       cardBtn2.append(cardTitle2);
       let displayedCard = null;
@@ -312,7 +312,7 @@ let dls2 = document.createElement("div")
       //correct
       save.addEventListener("click", function saveTask(e) {
         let good = e.target.parentNode;
-        let goodC = good.parentNode
+        let goodC = good.parentNode;
         let goodCard = goodC.parentNode;
         let goodCardId = goodCard.id;
 
@@ -360,33 +360,34 @@ let dls2 = document.createElement("div")
 
       save2.addEventListener("click", function saveTask2(e) {
         let good2 = e.target.parentNode;
-        let goodC2 = good2.parentNode
-        let goodCard2 = goodC2.parentNode
+        let goodC2 = good2.parentNode;
+        let goodCard2 = goodC2.parentNode;
         let goodCardId2 = goodCard2.id;
-        console.log(goodCardId2,goodCard2)
+        console.log(goodCardId2, goodCard2);
         let card = document.querySelector("#" + goodCardId2 + ".card");
-        
+
         let description2 = goodCard2.querySelector(".c22");
         let date2 = goodCard2.querySelector(".c32");
         let priority2 = goodCard2.querySelector(".c42");
-        
-        if(card){
-        if (goodCard2.id == card.id) {
-let description = card.querySelector(".c2");
-        let date = card.querySelector(".c3");
-        let priority = card.querySelector(".c4");
-          description.innerHTML = "Description: " + inputDescription2.value;
-          date.innerHTML = "Due Date: " + inputDate2.value;
-          priority.innerHTML = "Priority: " + inputPriority2.value;
 
-          if (inputPriority2.value == "Low") {
-            cardBtn.style.backgroundColor = "#bbded6";
-          } else if (inputPriority2.value == "Medium") {
-            cardBtn.style.backgroundColor = "#fae3d9";
-          } else {
-            cardBtn.style.backgroundColor = "#ffb6b9";
+        if (card) {
+          if (goodCard2.id == card.id) {
+            let description = card.querySelector(".c2");
+            let date = card.querySelector(".c3");
+            let priority = card.querySelector(".c4");
+            description.innerHTML = "Description: " + inputDescription2.value;
+            date.innerHTML = "Due Date: " + inputDate2.value;
+            priority.innerHTML = "Priority: " + inputPriority2.value;
+
+            if (inputPriority2.value == "Low") {
+              cardBtn.style.backgroundColor = "#bbded6";
+            } else if (inputPriority2.value == "Medium") {
+              cardBtn.style.backgroundColor = "#fae3d9";
+            } else {
+              cardBtn.style.backgroundColor = "#ffb6b9";
+            }
           }
-        } }
+        }
 
         description2.innerHTML = "Description: " + inputDescription2.value;
         date2.innerHTML = "Due Date: " + inputDate2.value;
